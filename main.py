@@ -13,6 +13,8 @@ if simp_numb(n):
 else:
     print(f"Число {n} не является простым")
 
+# -------------------------------------------------------------
+
 
 def filter_numbers(type, *numbers):
     result = []
@@ -35,6 +37,9 @@ def filter_numbers(type, *numbers):
 print(filter_numbers("even", 1, 2, 3, 4, 5, 6))
 print(filter_numbers("odd", 10, 15, 20, 25))
 print(filter_numbers("prime", 2, 3, 5, 7))
+
+# ----------------------------------------------------------------
+
 
 
 def merge_dicts(group_dicts):
