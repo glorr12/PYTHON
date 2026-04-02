@@ -3,7 +3,7 @@ import logging
 
 logging.basicConfig(
  filename="errors.log",
- format="%(asctime)s - %(filename)s - %(lineno)d - %(levelname)s -%(message)s",
+ format="%(asctime)s - %(filename)s - %(lineno)d - %(levelname)s -%(message)s",encoding="utf-8",
  level=logging.ERROR
 )
 logging.error("Error")
