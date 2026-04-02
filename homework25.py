@@ -4,11 +4,8 @@ import logging
 logging.basicConfig(
  filename="errors.log",
  format="%(asctime)s - %(filename)s - %(lineno)d - %(levelname)s -%(message)s",
- level=logging.DEBUG
+ level=logging.ERROR
 )
-logging.debug("Debug message")
-logging.info("Information message")
-logging.warning("Warning message")
 logging.error("Error")
 logging.critical("Critical error")
 def div():
@@ -20,7 +17,9 @@ def div():
         res = int(num) / int(num1)
         return res
     except ZeroDivisionError as d:
+        logging.critical("Ахнутг , гений делит на 0")
         return f"Нет нет нет, {d}"
     except ValueError:
+        logging.error("Алерт,алерт!Обнаружена строка в поле для интеджера")
         return "Ошибка.Введите корректные данные"
 print(div())
