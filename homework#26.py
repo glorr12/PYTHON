@@ -25,7 +25,7 @@ for root, dirs, files in os.walk(random):
             print(f"Найден файл с расширением: '{extension}': ")
             print(f"- {os.path.join(root, file)}")
             while True:
-                delete_file = input("Вы хотите удалить эти файлы? (y/n): ").lower()
+                delete_file = input("Вы хотите удалить этот файл? (y/n): ").lower()
                 try:
                     if delete_file not in ["y", "n"]:
                         raise ValueError("Введите коррентные даннын типа y(да), n(нет)")
@@ -33,7 +33,7 @@ for root, dirs, files in os.walk(random):
                     print(f"Найдена ошибка! {e}")
                 else:
                     if delete_file == "y":
-                        os.remove(file)
+                        os.remove(os.path.join(root, file))
                         print("Файл удалён")
                         break
                     else:
