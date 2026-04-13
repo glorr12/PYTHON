@@ -35,7 +35,6 @@ for root, dirs, files in os.walk(random):
                     if delete_file == "y":
                         os.remove(os.path.join(root, file))
                         print("Файл удалён")
-                        break
                     else:
                         pass
-                        break
+                    break
