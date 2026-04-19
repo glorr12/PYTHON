@@ -29,7 +29,7 @@ data = [
 ]
 
 
-def sum_grade(objects: list[dict]) -> str | int:
+def sum_grade(objects: list[dict]) -> int:
     """
     Функция, которая принимает список словарей, где каждый словарь содержит имя пользователя и список баллов
     :param objects: Принимает список словарей и суммирует баллы
