@@ -10,10 +10,8 @@ def joining(data: Any) -> str:
     :param data - Список любых данных
     :return: Строковое представление, объединённое через " | "
     """
-    elem = []
-    for el in data:
-        elem.append(str((el)))
-    return " | ".join(elem)
+
+    return " | ".join([str(el) for el in data])
 
 
 print(joining(data))
@@ -30,13 +28,15 @@ data = [
 
 ]
 
-def sum_grade(objects:list[dict]) -> str | int:
+
+def sum_grade(objects: list[dict]) -> str | int:
     """
     Функция, которая принимает список словарей, где каждый словарь содержит имя пользователя и список баллов
     :param objects: Принимает список словарей и суммирует баллы
     :return: Возвращает сумму всех чисел
     """
     result = map(lambda x: sum(x["scores"]), objects)
-    return f"Итоговый балл: {sum(result)}"
-print(sum_grade(data))
+    return sum(result)
 
+
+print(f"Сумма всех баллов:", sum_grade(data))
