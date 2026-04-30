@@ -5,10 +5,10 @@ def measure_time(func):
         total_time = 0
         for _ in range(5):
             start_time = time.perf_counter()
-            func()
+            result = func()
             end_time = time.perf_counter()
             total_time += end_time - start_time
-        return f"Среднее время выполнения для 5 вызовов: {round(total_time / 5, 2)}\nРезультат:{func()}"
+        return f"Среднее время выполнения для 5 вызовов: {round(total_time / 5, 2)}\nРезультат:{result}"
 
     return wrapper
 
