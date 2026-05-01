@@ -4,10 +4,7 @@ class Rectangle:
         self.width = width
         self.height = height
     def get_area(self) -> int | float:
-        """
-        Метод возвращает площадь прямоугольника
-        :return: вычисление площая прямоугольника
-        """
+        """Метод вычисляет площадь прямоугольника и возвращает результат"""
         return self.width * self.height
 
 s = Rectangle(10, 2)
