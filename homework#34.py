@@ -23,18 +23,18 @@ class Counter:
     def increase(self):
         """Увеличививает значение счетчика на 1 и выводит результат"""
         self.value += 1
-        return f"Значение увеличено, текущее: {self.value}"
+        return self.value
     def decrease(self):
         """Уменьшает значение счетчика на 1 и выводит резульат"""
         self.value -= 1
-        return f"Значение уменьшено, текущее: {self.value}"
+        return self.value
     def current_counter(self):
         """Выводит текущее значение счетчика"""
-        return f"Текущее значение: {self.value}"
+        return self.value
 
 s = Counter()
-print(s.increase())
-print(s.increase())
-print(s.increase())
-print(s.decrease())
-print(s.current_counter())
+print(f"Значение увеличено, текущее:{s.increase()}")
+print(f"Значение увеличено, текущее:{s.increase()}")
+print(f"Значение увеличено, текущее:{s.increase()}")
+print(f"Значение уменьшено, текущее:{s.decrease()}")
+print(f"Текущее значение:{s.current_counter()}")
