@@ -21,7 +21,7 @@ class Teacher(Person):
     def introduce(self):
         print(f"Hello, I am professor {self.name}. My subject is {self.subject}")
 
-eblani = [Student("Alice", 2), Teacher("Bob", "Mathematics")]
+group1 = [Student("Alice", 2), Teacher("Bob", "Mathematics")]
 
-for eblan in eblani:
-    eblan.introduce()
+for g in group1:
+    g.introduce()
