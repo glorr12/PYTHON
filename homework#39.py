@@ -1,28 +1,32 @@
+from abc import abstractmethod, ABC
+
+
 class InvalidSizeError(ValueError):
     pass
 
-class Shape :
-    def area(self):
+class Shape(ABC):
+    @abstractmethod
+    def area(self) -> float:
         pass
 
 class Circle(Shape):
-    def __init__(self,radius):
+    def __init__(self,radius:float):
         if radius <= 0:
             raise InvalidSizeError(f"Радиус должен быть положительным")
         self.radius = radius
 
-    def area(self):
+    def area(self) -> float:
         import math
         return math.pi * (self.radius ** 2)
 
 class Rectangle(Shape):
-    def __init__(self,width,height):
+    def __init__(self,width: float,height: float):
         if width <= 0 or height <= 0:
             raise InvalidSizeError(f"Размеры должны быть положительными")
         self.width = width
         self.height = height
 
-    def area(self):
+    def area(self) -> float:
         return self.width * self.height
 
 
